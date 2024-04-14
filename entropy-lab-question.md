@@ -22,25 +22,24 @@ Calculate the entropy for the entire dataset. The `Annual Income` is the target 
 
 The entropy of the entire dataset is calculated as follows:
 
-$$\text{Entropy(\text{Annual Income})} = - \sum_{i=1}^{n} p_i \log_2 p_i$$
+$$Entropy({Annual Income}) = - \sum_{i=1}^{n} p_i \log_2 p_i$$
 
 where $p_i$ is the probability of the $i$th class.
 
 The probability of each class of `Annual Income` is calculated as follows:
 
-$p(\text{<25K}) = \frac{2}{8} = 0.25$  
-$p(\text{25K-50K}) = \frac{5}{8} = 0.625$  
-$p(\text{>50K}) = \frac{1}{8} = 0.125$  
+$p(<25K) = \frac{2}{8} = 0.25$  
+$p(25K-50K) = \frac{5}{8} = 0.625$  
+$p(>50K) = \frac{1}{8} = 0.125$  
 
 The entropy of the entire dataset is calculated as follows:
 
-$\text{H(\text{AI})} = - (\text{H(\text{AI=<25K})} + \text{H(\text{AI=25K-50K})} + \text{H(\text{AI=>50K})})$  
-$\text{H(\text{AI})} = - ((0.25 \log_2 0.25) + (0.625 \log_2 0.625) + (0.125 \log_2 0.125))$  
-
-$\text{H(\text{AI})} = - ((0.25 \times -2) + (0.625 \times 0.6781) + (0.125 \times -3))$  
-$\text{H(\text{AI})} = - (-0.5 + -0.4238 + -0.375)$  
-$\text{H(\text{AI})} = - (-1.2988)$  
-$\text{H(\text{AI})} = 1.2988$
+$H(AI) = - (H(AI=<25K) + H(AI=25K-50K) + H(AI=>50K))$  
+$H(AI) = - ((0.25 \log_2 0.25) + (0.625 \log_2 0.625) + (0.125 \log_2 0.125))$  
+$H(AI) = - ((0.25 \times -2) + (0.625 \times 0.6781) + (0.125 \times -3))$  
+$H(AI) = - (-0.5 + -0.4238 + -0.375)$  
+$H(AI) = - (-1.2988)$  
+$H(AI) = 1.2988$
 
 ## Question 2
 

@@ -22,7 +22,7 @@ Calculate the entropy for the entire dataset. The `Annual Income` is the target 
 
 The entropy of the entire dataset is calculated as follows:
 
-$$ \text{Entropy(\text{Annual Income})} = - \sum_{i=1}^{n} p_i \log_2 p_i $$
+$$\text{Entropy(\text{Annual Income})} = - \sum_{i=1}^{n} p_i \log_2 p_i$$
 
 where $p_i$ is the probability of the $i$th class.
 

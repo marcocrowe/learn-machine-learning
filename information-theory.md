@@ -67,7 +67,9 @@ In the partitioning of the dataset, when SW=TRUE, there are 3 spam and 0 ham.
 When SW=FALSE, there are 0 spam and 3 ham.
 Total Records of Dataset |D| = 6
 
-Entropy for SW is
+Weighted Average Entropy for SW is
+
+$\sum_{j} \frac{|D_j|}{|D|} \cdot H(D_j) \text{where} H(D_j)= \sum_{i=1}^{n} p_i \log_2 p_i$  
 
 $H(SW, D) = \frac{|SW_{\text{True}}|}{|D|} H(SW_{\text{True}}) + \frac{|SW_{\text{False}}|}{|D|} H(SW_{\text{False}})$  
 $H(SW, D) = \frac{3}{6} H(SW_{\text{True}}) + \frac{3}{6} H(SW_{\text{False}})$  

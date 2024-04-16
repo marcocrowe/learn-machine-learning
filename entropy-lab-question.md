@@ -49,42 +49,43 @@ Clearly show the entropy and information gain for each feature that was generate
 
 ### Answer 2
 
-$IG(E) = H(D) - \sum_{j} \frac{|D_j|}{|D|} \cdot H(D_j)$
+$IG(X) = H(D) - H(D|X)$  
+where $H(D|X) = -\sum_{j} \frac{|D_j|}{|D|} \cdot H(D_j)$
 
 ---
 
 Calculate the weighted average entropy for `Education`, E.
 
-$H(E, D) = \frac{|E_{\text{bachelors}}|}{|D|} H(E_{\text{bachelors}}) + \frac{|E_{\text{highschool}}|}{|D|} H(E_{\text{highschool}})+ \frac{|E_{\text{doctorate}}|}{|D|} H(E_{\text{doctorate}})$  
-$H(E, D) = \frac{3}{8} H(E_{\text{bachelors}}) + \frac{4}{8} H(E_{\text{highschool}}) + \frac{1}{8} H(E_{\text{doctorate}})$  
+$H(AI|E) = - (\frac{|E_{\text{bachelors}}|}{|D|} H(E_{\text{bachelors}}) + \frac{|E_{\text{highschool}}|}{|D|} H(E_{\text{highschool}})+ \frac{|E_{\text{doctorate}}|}{|D|} H(E_{\text{doctorate}}))$  
+$H(AI|E) = -(\frac{3}{8} H(E_{\text{bachelors}}) + \frac{4}{8} H(E_{\text{highschool}}) + \frac{1}{8} H(E_{\text{doctorate}}))$  
 $H(E_{\text{bachelors}}) = ((\frac{3}{3} \log_2 \frac{3}{3}) + (\frac{0}{3} \times \log_2 \frac{0}{3})+ (\frac{0}{3} \times \log_2 \frac{0}{3})) = 0$
 $H(E_{\text{highschool}}) = ((\frac{2}{4} \log_2 \frac{2}{4}) + (\frac{2}{4} \times \log_2 \frac{2}{4})+ (\frac{0}{4} \times \log_2 \frac{0}{4})) = -0.5 - 0.5 + 0 = -1$
 $H(E_{\text{doctorate}}) = ((\frac{1}{1} \log_2 \frac{1}{1}) + (\frac{0}{1} \times \log_2 \frac{0}{1})+ (\frac{0}{1} \times \log_2 \frac{0}{1})) = 0$
 
-$H(E, D) = \frac{3}{8} \times 0 + \frac{4}{8} \times -1 + \frac{1}{8} \times 0$
-$H(E, D) = 0 - 0.5 + 0 = -0.5$
-$I(Education) = 1.2988 - (-0.5) = 1.7988$
+$H(AI|E) = -(\frac{3}{8} \times 0 + \frac{4}{8} \times -1 + \frac{1}{8} \times 0)$
+$H(AI|E) = -(0 - 0.5 + 0) = 0.5$  
+$IG(E) H(AI) - H(AI|E) = 1.2988 - (0.5) = 0.7988$  
 
 ---
 
 Calculate the weighted average entropy for `Marital Status`, MS.
 
-$H(MS, D) = \frac{|MS_{\text{never married}}|}{|D|} H(MS_{\text{never married}}) + \frac{|MS_{\text{married}}|}{|D|} H(MS_{\text{married}})+ \frac{|MS_{\text{divorced}}|}{|D|} H(MS_{\text{divorced}})$
-$H(MS, D) = \frac{3}{8} H(MS_{\text{never married}}) + \frac{4}{8} H(MS_{\text{married}}) + \frac{1}{8} H(MS_{\text{divorced}})$  
+$H(AI|MS) = -(\frac{|MS_{\text{never married}}|}{|D|} H(MS_{\text{never married}}) + \frac{|MS_{\text{married}}|}{|D|} H(MS_{\text{married}})+ \frac{|MS_{\text{divorced}}|}{|D|} H(MS_{\text{divorced}}))$
+$H(AI|MS) = -(\frac{3}{8} H(MS_{\text{never married}}) + \frac{4}{8} H(MS_{\text{married}}) + \frac{1}{8} H(MS_{\text{divorced}}))$  
 $H(MS_{\text{never married}}) = ((\frac{2}{3} \log_2 \frac{2}{3}) + (\frac{1}{3} \times \log_2 \frac{1}{3})+ (\frac{0}{3} \times \log_2 \frac{0}{3})) = -0.3899 - -0.5283 = -0.9182$  
-$H(MS_{\text{married}}) = ((\frac{0}{4} \log_2 \frac{0}{4}) + (\frac{3}{4} \times \log_2 \frac{3}{4})+ (\frac{1}{4} \times \log_2 \frac{1}{4})) = -0.3113 -0.5 + 0 = -0.8113$  
+$H(MS_{\text{married}}) = ((\frac{0}{4} \log_2 \frac{0}{4}) + (\frac{3}{4} \times \log_2 \frac{3}{4})+ (\frac{1}{4} \times \log_2 \frac{1}{4})) = 0 + (0.75 * -0.415) + (0.25 * -2) = -0.3112 - 0.5 = -0.8112$
 $H(MS_{\text{divorced}}) = ((\frac{0}{1} \log_2 \frac{0}{1}) + (\frac{0}{1} \times \log_2 \frac{0}{1})+ (\frac{1}{1} \times \log_2 \frac{1}{1})) = 0$  
-$H(MS, D) = \frac{3}{8} \times -0.9182 + \frac{4}{8} \times -0.8113 + \frac{1}{8} \times 0$  
-$H(MS, D) = -0.3443 - 0.4056 + 0 =  = -0.7499$  
-$IG(MS) = 1.2988 - (-0.7499) = 2.0487$
+$H(AI|MS) = -(\frac{3}{8} \times -0.9182 + \frac{4}{8} \times -0.8113 + \frac{1}{8} \times 0)$  
+$H(AI|MS) = -(-0.3443 - 0.4056 + 0) = 0.7499$  
+$IG(MS) = H(AI) - H(AI|MS) = 1.2988 - 0.7499 = 0.5489$
 
 ---
 
 Calculate the weighted average entropy for `Occupation`, O.
 
-$H(O, D) = \frac{|O_{\text{transport}}|}{|D|} H(O_{\text{transport}}) + \frac{|O_{\text{professional}}|}{|D|} H(O_{\text{professional}})+ \frac{|O_{\text{agriculture}}|}{|D|} H(O_{\text{agriculture}}) + \frac{|O_{\text{armed forces}}|}{|D|} H(O_{\text{armed forces}})$  
+$H(AI|O) = -(\frac{|O_{\text{transport}}|}{|D|} H(O_{\text{transport}}) + \frac{|O_{\text{professional}}|}{|D|} H(O_{\text{professional}})+ \frac{|O_{\text{agriculture}}|}{|D|} H(O_{\text{agriculture}}) + \frac{|O_{\text{armed forces}}|}{|D|} H(O_{\text{armed forces}}))$  
 
-$H(O, D) = \frac{2}{8} H(O_{\text{transport}}) + \frac{3}{8} H(O_{\text{professional}}) + \frac{2}{8} H(O_{\text{agriculture}}) + \frac{1}{8} H(O_{\text{armed forces}})$  
+$H(AI|O) = -(\frac{2}{8} H(O_{\text{transport}}) + \frac{3}{8} H(O_{\text{professional}}) + \frac{2}{8} H(O_{\text{agriculture}}) + \frac{1}{8} H(O_{\text{armed forces}}))$  
 
 $H(O_{\text{transport}}) = ((\frac{2}{2} \log_2 \frac{2}{2}) + (\frac{0}{2} \times \log_2 \frac{0}{2})+ (\frac{0}{2} \times \log_2 \frac{0}{2}) = 0$  
 $H(O_{\text{transport}}) = 1*0 - 0 - 0 = 0  $
@@ -94,9 +95,9 @@ $H(O_{\text{professional}}) = ((\frac{1}{3} \log_2 \frac{1}{3}) + (\frac{2}{3} \
 $H(O_{\text{agriculture}}) = ((\frac{1}{2} \log_2 \frac{1}{2}) + (\frac{1}{2} \times \log_2 \frac{1}{2})+ (\frac{0}{2} \times \log_2 \frac{0}{2}) = -0.5 - 0.5 + 0 = -1$
 
 $H(O_{\text{armed forces}}) = ((\frac{0}{1} \log_2 \frac{0}{1}) + (\frac{0}{1} \times \log_2 \frac{0}{1})+ (\frac{1}{1} \times \log_2 \frac{1}{1}) = 0 + 0 + (1\times0) =0$
-$H(O, D) = (\frac{2}{8} \times 0) + (\frac{3}{8} \times -0.9182) + (\frac{2}{8} \times -1 )+ (\frac{1}{8} \times 0)$
-$H(O, D) = 0 - 0.3443 - 0.25 + 0 = -0.5943$
-$IG(O) = 1.2988 - (-0.5943) = 1.8931$
+$H(AI|O) = -((\frac{2}{8} \times 0) + (\frac{3}{8} \times -0.9182) + (\frac{2}{8} \times -1 )+ (\frac{1}{8} \times 0))$
+$H(AI|O) = -(0 - 0.3443 - 0.25 + 0) = 0.5943$
+$IG(O) = H(AI) - H(AI|O) = 1.2988 - (0.5943) = 0.7045$
 
 ## Question 3
 
@@ -104,4 +105,4 @@ A colleague suggests that the feature `Marital Status` should be the root of the
 
 ### Answer 3
 
-The feature `Marital Status` should be the root of the tree because it has the highest information gain of 2.0487. This means that it provides the most information about the target variable `Annual Income` compared to the other features. Therefore, it is a good choice for the root of the decision tree as it will help in making the most accurate predictions.
+The feature `Education` should be the root of the tree because it has the highest information gain of 0.7988. This means that the feature `Education` provides the most information about the target feature `Annual Income`. The feature `Marital Status` has an information gain of 0.5489, which is lower than the information gain of `Education`. Therefore, the feature `Marital Status` should not be the root of the tree.

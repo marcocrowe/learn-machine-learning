@@ -166,7 +166,6 @@ The consultant generated the following data quality report from the ABT.
 | Prev. Tachycardia | 2,440 |     4,402 |           3 | FALSE |       714 |  52.27 | TRUE     |           652 |      47.73 |
 | Tachycardia       | 2,440 |       201 |           3 | FALSE |     1,205 |  50.40 | TRUE     |         1,156 |      49.60 |
 
-
 | Feature   | Count | % Missing | Cardinality |    Min | 1stQuartile |     Mean | Median | 3rd Quartile |        Max | Standard Deviation |
 |-----------|------:|----------:|------------:|-------:|------------:|---------:|-------:|-------------:|-----------:|-------------------:|
 | Age       | 2,440 |         0 |           7 |   1.00 |        3.00 |     3.58 |   4.00 |         5.00 |       7.00 |               1.22 |

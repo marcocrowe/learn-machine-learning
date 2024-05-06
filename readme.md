@@ -15,6 +15,10 @@ This repository contains the code for the machine learning.
 
 - [VS Code](https://code.visualstudio.com/): [Python](https://code.visualstudio.com/docs/languages/python)
 
+## Exam Papers
+
+- [2023 Summer COMP08059](exam-papers/exam-2023-summer-comp08059.md "2023 Summer COMP08059")
+
 ---
 
 Copyright &copy; 2024 Mark Crowe <https://github.com/marcocrowe>. All rights reserved.

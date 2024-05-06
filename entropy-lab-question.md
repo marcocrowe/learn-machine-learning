@@ -64,7 +64,7 @@ $H(E_{\text{doctorate}}) = ((\frac{1}{1} \log_2 \frac{1}{1}) + (\frac{0}{1} \tim
 
 $H(AI|E) = -(\frac{3}{8} \times 0 + \frac{4}{8} \times -1 + \frac{1}{8} \times 0)$
 $H(AI|E) = -(0 - 0.5 + 0) = 0.5$  
-$IG(E) H(AI) - H(AI|E) = 1.2988 - (0.5) = 0.7988$  
+$IG(E) = H(AI) - H(AI|E) = 1.2988 - (0.5) = 0.7988$  
 
 ---
 

@@ -1,0 +1,7 @@
+# ,Humid,Cloudy,Windy,Rain
+1,True,False,True,Yes
+2,True,True,False,Yes
+3,True,True,False,Yes
+4,False,True,True,No
+5,False,False,False,No
+6,False,False,False,No

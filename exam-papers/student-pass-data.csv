@@ -1,0 +1,11 @@
+StudentId,Study,AttendLectures,CompleteCA,PassMachineLearning
+K00101010,Yes,Yes,Yes,Yes
+K00101020,No,Yes,Yes,Yes
+K00101030,Yes,Yes,No,Yes
+K00101040,No,Yes,No,No
+K00101050,Yes,No,Yes,Yes
+K00101060,No,No,No,No
+K00101070,Yes,No,No,No
+K00101080,No,Yes,No,No
+K00101090,Yes,No,Yes,Yes
+K00101100,Yes,No,No,No

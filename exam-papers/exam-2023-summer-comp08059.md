@@ -77,7 +77,7 @@ $\text{Range} = 38$
 
 Variance is a measure of how spread out the values in a dataset are around the mean. It is calculated as the average of the squared differences between each value and the mean. The formula for calculating the variance is:
 
-$$\text{Variance} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}$$
+$$\text{Variance} = \dfrac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}$$
 
 $\bar{x}$ is the mean of the dataset.
 $\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n} = \frac{51 + 39 + 34 + \ldots + 33}{20} = \frac{671}{20} = 33.55$

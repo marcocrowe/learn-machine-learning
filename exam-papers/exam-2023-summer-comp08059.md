@@ -203,26 +203,27 @@ The table below shows a set of eight Scrabble pieces.
 
 What is the Entropy in bits for the letters in this set? Clearly state the Entropy formula in your answer.
 
-$Entropy = -\sum_{i=1}^{n} p_i \log_2 p_i$  
+$E(S) = \sum_{i=1}^{n} (- p_i \log_2 p_i)$  
 
 Where:
 
-- $Entropy$ is the entropy of the dataset.
+- $E(S)$ is the entropy of the dataset.
 - $n$ is the number of classes in the dataset.
 - $p_i$ is the probability of class $i$ in the dataset.
+- $i$ is the index of the class.
 
 Frequency Table of each letter in the dataset:
 
-| Letter       | Frequency | Probability | $p_i \log_2 p_i$           | $Entropy_i$ |
-|--------------|----------:|------------:|----------------------------|------------:|
-| O            |         3 |       $3/8$ | $(3/8 \times \log_2(3/8))$ |     - 0.531 |
-| X            |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ |     - 0.375 |
-| Y            |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ |     - 0.375 |
-| M            |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ |     - 0.375 |
-| R            |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ |     - 0.375 |
-| N            |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ |     - 0.375 |
-| -            |         - |           - | -                          |           - |
-| $-\sum(E_i)$ |         - |           - | -                          |       2.406 |
+| Letter            | Frequency | Probability | $-p_i \log_2 p_i$          | $E_i$ |
+|-------------------|----------:|------------:|----------------------------|------:|
+| O                 |         3 |       $3/8$ | $(3/8 \times \log_2(3/8))$ | 0.531 |
+| X                 |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ | 0.375 |
+| Y                 |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ | 0.375 |
+| M                 |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ | 0.375 |
+| R                 |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ | 0.375 |
+| N                 |         1 |       $1/8$ | $(1/8 \times \log_2(1/8))$ | 0.375 |
+| ...               |       ... |         ... | ...                        |   ... |
+| $\sum_{i=1}^nE_i$ |           |             |                            | 2.406 |
 
 Entropy = 2.406 bits
 
@@ -252,24 +253,25 @@ What would be the reduction in entropy (Information Gain) if you split the lette
     - Calculate the entropy of consonants:
         - $E_{\text{consonants}} = - \sum_{i=1}^{5} p \log_2 p$
         - $E_{\text{consonants}} = -5 \times \left(0.2 \times \log_2 0.2\right)$
-        - $E_{\text{consonants}} = -5 \times (0.2 \times -2.322)$
-        - $E_{\text{consonants}} = 1.160$ bits.
+        - $E_{\text{consonants}} = -5 \times \dfrac{1}{5} \times -2.322$
+        - $E_{\text{consonants}} = 2.322$ bits.
 
 #### Step 3: Calculate the weighted entropy after the split
 
 - Weighted entropy = $p_{\text{vowels}} \cdot E_{\text{vowels}} + p_{\text{consonants}} \cdot E_{\text{consonants}}$
-- Weighted entropy = $\frac{3}{8} \times 0 + \frac{5}{8} \times 1.160$
-- Weighted entropy = $0 + 0.725$ bits.
+- Weighted entropy = $\frac{3}{8} \times 0 + \frac{5}{8} \times 2.322$
+- Weighted entropy = $0 + 1.45125$ bits.
+- Weighted entropy = $1.45125$ bits.
 
 #### Step 4: Calculate the information gain
 
 - **Original entropy**: The original entropy, calculated previously, is approximately $2.406$ bits.
 - Information gain is the reduction in entropy that results from splitting the data.
 - Information gain = Original entropy - Weighted entropy after split
-- Information gain = $2.406 - 0.725$
-- Information gain = $1.681$ bits.
+- Information gain = $2.406 - 1.45125$
+- Information gain = $0.95475$ bits.
 
-Therefore, the reduction in entropy (information gain) if you split the letters into two sets, vowels (O) and consonants (X, Y, M, R, N), is approximately $1.681$ bits.
+Therefore, the reduction in entropy (information gain) if you split the letters into two sets, vowels (O) and consonants (X, Y, M, R, N), is approximately $0.95475$ bits.
 
 ### Question 4(c) (8 Marks)
 

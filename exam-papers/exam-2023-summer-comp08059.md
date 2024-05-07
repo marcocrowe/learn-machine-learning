@@ -367,13 +367,43 @@ Clearly state Bayes theorem. Using Bayes Theorem determine the probability of a 
 
 Bays Theorem states that the probability of an event based on prior knowledge of conditions that might be related to the event. Mathematically, it is expressed as:
 
+$$P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$$  
+
+$P(PassModule | (StudyHard,\overline{AttendLectures}, DoesCA))$  
+
+let `StudyHard` = $S$, `AttendLectures` = $L$, `DoesCA` = $C$, `PassModule` = $A$
+
+$$P(A|S,\overline{L},C) = \frac{P(S,\overline{L},C|A) \times P(A)}{P(S,\overline{L},C)}$$
+
+let $ S \cap \overline{L} \cap C = B$
+
 $$P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$$
 
-$P(PassModule | (StudyHard,\overline{AttendLectures}, DoesCA))$
+There are 10 record
 
-$$P(Pass | (StudyHard,\overline{AttendLectures}, DoCA)) = \frac{P((StudyHard,\overline{AttendLectures}, DoCA) | Pass) \times P(Pass)}{P(StudyHard,\overline{AttendLectures}, DoCA)}$$
+A is True 3 Times
 
-***Answer:***
+
+$P(A) = \dfrac{3}{10}$
+
+B, i.e $S \cap \overline{L} \cap C$ is True 6 times
+
+$P(B) = \dfrac{6}{10}$
+
+$P(B|A)$
+
+There are 3 instances of A i.e. Records 5, 8, 10
+
+and of those records only 8 and 10 are B i.e. $S \cap \overline{L} \cap C$
+
+Hence the $P(B|A) = \dfrac{P(S \cap \overline{L} \cap C \cap A)}{P(S \cap \overline{L} \cap C)} = \dfrac{\frac{2}{10}}{\frac{3}{10}} = \frac{2}{3}$
+
+**Plug in the values:**
+
+$$P(A|B) = \dfrac{\frac{2}{3} \times \frac{3}{10}}{\frac{6}{10}} = \frac{2}{6} = \frac{1}{3}$$
+
+
+***Short Answer:***
 There are 6 instances of $StudyHard \cap \overline{AttendLectures} \cap DoesCA$ i.e. Records 3, 4, 6, 7, 8, 10
 
 Of those 6 instances, 2 are PassModule = True i.e. Records 8, 10
@@ -461,5 +491,45 @@ Features to Exclude and Reasons
     - **Reason**: Depending on the data source and the context of the application, gender may be a contentious feature due to privacy and ethical concerns. If it doesn't offer a clear benefit in prediction, it might be advisable to exclude it to avoid potential biases and ensure ethical data practices.
 
 These decisions should be informed by an exploratory data analysis (EDA) that examines the relationships and correlations between each feature and the target variable, as well as any ethical, legal, or privacy concerns associated with using specific features. Always aim to keep only the features that offer a meaningful contribution to the model's performance.
+
+### Question 5(c) 1 ALTERNATE
+
+Equal-width binning, also known as equal-interval binning, is a method of dividing a numeric variable (in this case, `Age`) into a specific number of bins such that each bin spans an equal range of values. In your example, the goal is to transform the `Age` feature into three categorical levels: "youth," "middle-aged," and "senior." Here's how to apply the process:
+
+### Step 1: Calculate the Range of the Age Data
+
+1. **Calculate the range of the Age data**: Determine the minimum and maximum values in the `Age` data.
+
+    Minimum Age: 18
+    Maximum Age: 57
+    Range: Maximum - Minimum = 57 - 18 = 39
+
+### Step 2: Calculate the Bin Width
+
+2. **Calculate the bin width**: Divide the range of the data by the desired number of bins (3) to determine the width of each bin.
+
+    Bin width: \( \text{Range} \div \text{Number of bins} = 39 \div 3 = 13 \)
+
+### Step 3: Determine Bin Edges
+
+3. **Determine the bin edges**: Calculate the edges of each bin based on the minimum age and the bin width.
+
+- Bin 1: Minimum Age + Bin width = 18 + 13 = 31
+- Bin 2: 31 + 13 = 44
+- Bin 3: 44 + 13 = 57
+
+Thus, the bin edges are 31 and 44.
+
+### Step 4: Label the Age Feature
+
+4. **Label the bins**: Based on the calculated bin edges, label the `Age` feature accordingly.
+
+- "Youth": Ages less than 31 are labeled as "youth."
+- "Middle-aged": Ages from 31 (inclusive) to 44 (exclusive) are labeled as "middle-aged."
+- "Senior": Ages 44 and above are labeled as "senior."
+
+### Conclusion
+
+Apply the above transformation process to the dataset. This process groups the `Age` feature into three bins based on equal-width binning, converting the `Age` feature into a categorical feature with three levels: "youth," "middle-aged," and "senior."
 
 ---

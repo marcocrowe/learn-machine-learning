@@ -89,28 +89,28 @@ $\text{Variance} = \frac{(51 - 33.55)^2 + (39 - 33.55)^2 + \ldots + (33 - 33.55)
 #### As a table
 
 | Id                               | Age | $Age_i - \overline{Age}$ |    $(Age_i - \overline{Age})^2$ |
-|----------------------------------|-----|-------------------------:|--------------------------------:|
-| 1                                | 51  |       (51-33.55) = 17.45 |           $17.45^2$ =  304.5025 |
-| 2                                | 39  |                     5.45 |                         29.7025 |
-| 3                                | 34  |                     0.45 |                          0.2025 |
-| 4                                | 27  |                    -6.55 |                         42.9025 |
-| 5                                | 23  |                   -10.55 |                        111.3025 |
-| 6                                | 43  |                     9.45 |                         89.3025 |
-| 7                                | 41  |                     7.45 |                         55.5025 |
-| 8                                | 55  |                    21.45 |                        460.1025 |
-| 9                                | 24  |                    -9.55 |                         91.2025 |
-| 10                               | 25  |                    -8.55 |                         73.1025 |
-| 11                               | 38  |                     4.45 |                         19.8025 |
-| 12                               | 17  |                   -16.55 |                        273.9025 |
-| 13                               | 21  |                   -12.55 |                        157.5025 |
-| 14                               | 37  |                     3.45 |                         11.9025 |
-| 15                               | 35  |                     1.45 |                          2.1025 |
-| 16                               | 38  |                     4.45 |                         19.8025 |
-| 17                               | 31  |                    -2.55 |                          6.5025 |
-| 18                               | 24  |                    -9.55 |                         91.2025 |
-| 19                               | 35  |                     1.45 |                          2.1025 |
-| 20                               | 33  |                    -0.55 |                          0.3025 |
-| -                                | -   |                        - |                               - |
+|----------------------------------|----:|-------------------------:|--------------------------------:|
+| 1                                |  51 |       (51-33.55) = 17.45 |           $17.45^2$ =  304.5025 |
+| 2                                |  39 |                     5.45 |                         29.7025 |
+| 3                                |  34 |                     0.45 |                          0.2025 |
+| 4                                |  27 |                    -6.55 |                         42.9025 |
+| 5                                |  23 |                   -10.55 |                        111.3025 |
+| 6                                |  43 |                     9.45 |                         89.3025 |
+| 7                                |  41 |                     7.45 |                         55.5025 |
+| 8                                |  55 |                    21.45 |                        460.1025 |
+| 9                                |  24 |                    -9.55 |                         91.2025 |
+| 10                               |  25 |                    -8.55 |                         73.1025 |
+| 11                               |  38 |                     4.45 |                         19.8025 |
+| 12                               |  17 |                   -16.55 |                        273.9025 |
+| 13                               |  21 |                   -12.55 |                        157.5025 |
+| 14                               |  37 |                     3.45 |                         11.9025 |
+| 15                               |  35 |                     1.45 |                          2.1025 |
+| 16                               |  38 |                     4.45 |                         19.8025 |
+| 17                               |  31 |                    -2.55 |                          6.5025 |
+| 18                               |  24 |                    -9.55 |                         91.2025 |
+| 19                               |  35 |                     1.45 |                          2.1025 |
+| 20                               |  33 |                    -0.55 |                          0.3025 |
+| -                                |   - |                        - |                               - |
 | $\sum(Age_i - \overline{Age})^2$ |     |                          |                        1,842.95 |
 | $Variance$                       |     |                          | $\frac{1,842.95}{20} = 92.1475$ |
 
@@ -166,16 +166,16 @@ The consultant generated the following data quality report from the ABT.
 | Prev. Tachycardia | 2,440 |     4,402 |           3 | FALSE |       714 |  52.27 | TRUE     |           652 |      47.73 |
 | Tachycardia       | 2,440 |       201 |           3 | FALSE |     1,205 |  50.40 | TRUE     |         1,156 |      49.60 |
 
-| Feature   | Count | % Missing | Cardinality |    Min | 1stQuartile |     Mean | Median | 3rd Quartile |        Max | Standard Deviation |
-|-----------|------:|----------:|------------:|-------:|------------:|---------:|-------:|-------------:|-----------:|-------------------:|
-| Age       | 2,440 |         0 |           7 |   1.00 |        3.00 |     3.58 |   4.00 |         5.00 |       7.00 |               1.22 |
-| Weight    | 2,440 |         0 |         174 |   0.00 |       81.00 |     95.3 |  95.00 |       100.00 |     157.00 |              20.89 |
-| Height    | 2,440 |         0 |         109 |   1.47 |      162.00 |   162.21 | 171.50 |       179.00 |     204.00 |              41.05 |
-| BMI       | 2,440 |         0 |       1,383 |   0.00 |       27.64 | 1,8523.4 |  32.02 |        38.57 | 596,495.31 |          7,708,839 |
-| SYS. B.P. | 2,440 |         0 |         149 |  62.00 |      115.00 |   127.84 | 124.00 |       135.00 |    1144.00 |              29.11 |
-| DIA. B.P. | 2,440 |         0 |         109 |  46.00 |       77.00 |    85.34 |  84.00 |        92.00 |     173.60 |              14.25 |
-| HeartRate | 2,440 |         0 |         119 |  57.00 |       91.75 |   103.28 | 100.00 |       110.00 |     190.40 |              18.21 |
-| H.R. Diff | 2,440 |     13.03 |          78 | -50.00 |       -4.00 |     3.00 |   1.00 |         8.00 |      47.00 |              12.35 |
+| Feature   | Count | % Missing | Cardinality |    Min | 1stQuartile |      Mean | Median | 3rd Quartile |        Max | Standard Deviation |
+|-----------|------:|----------:|------------:|-------:|------------:|----------:|-------:|-------------:|-----------:|-------------------:|
+| Age       | 2,440 |         0 |           7 |   1.00 |        3.00 |      3.58 |   4.00 |         5.00 |       7.00 |               1.22 |
+| Weight    | 2,440 |         0 |         174 |   0.00 |       81.00 |     95.30 |  95.00 |       100.00 |     157.00 |              20.89 |
+| Height    | 2,440 |         0 |         109 |   1.47 |      162.00 |    162.21 | 171.50 |       179.00 |     204.00 |              41.05 |
+| BMI       | 2,440 |         0 |       1,383 |   0.00 |       27.64 | 1,8523.40 |  32.02 |        38.57 | 596,495.31 |       7,708,839.00 |
+| SYS. B.P. | 2,440 |         0 |         149 |  62.00 |      115.00 |    127.84 | 124.00 |       135.00 |    1144.00 |              29.11 |
+| DIA. B.P. | 2,440 |         0 |         109 |  46.00 |       77.00 |     85.34 |  84.00 |        92.00 |     173.60 |              14.25 |
+| HeartRate | 2,440 |         0 |         119 |  57.00 |       91.75 |    103.28 | 100.00 |       110.00 |     190.40 |              18.21 |
+| H.R. Diff | 2,440 |     13.03 |          78 | -50.00 |       -4.00 |      3.00 |   1.00 |         8.00 |      47.00 |              12.35 |
 
 Discuss this data quality report in terms of the following, outline the implication of the result and advice in handling this result:
 
@@ -384,15 +384,80 @@ The Table below lists a dataset containing details of customers at a transport c
 
 | Id | Occupation   | Gender | Age | ModeOfTransport | PrefSocialMedia |
 |----|--------------|--------|----:|-----------------|-----------------|
-| 1  | Painter      | Female | 43  | Car             | Email           |
-| 2  | Programmer   | Female | 57  | Bike            | Phone           |
-| 3  | Manager      | Male   | 21  | Bike            | Email           |
-| 4  | Doctor       | Female | 47  | Walk            | Phone           |
-| 5  | Nurse        | Male   | 55  | Car             | Phone           |
-| 6  | Policeman    | Male   | 19  | Bike            | Email           |
-| 7  | Teacher      | Male   | 49  | Car             | Phone           |
-| 8  | Fireman      | Male   | 51  | Walk            | Email           |
-| 9  | Radiographer | Female | 18  | Car             | Phone           |
+| 1  | Painter      | Female |  43 | Car             | Email           |
+| 2  | Programmer   | Female |  57 | Bike            | Phone           |
+| 3  | Manager      | Male   |  21 | Bike            | Email           |
+| 4  | Doctor       | Female |  47 | Walk            | Phone           |
+| 5  | Nurse        | Male   |  55 | Car             | Phone           |
+| 6  | Policeman    | Male   |  19 | Bike            | Email           |
+| 7  | Teacher      | Male   |  49 | Car             | Phone           |
+| 8  | Fireman      | Male   |  51 | Walk            | Email           |
+| 9  | Radiographer | Female |  18 | Car             | Phone           |
 
-1. Using equal-frequency binning transform the Age feature into a categorical feature with three levels youth, middle-aged and senior. Explain the process you apply.
-2. Examine the descriptive features in the dataset and list the features that your would exclude before you would use the dataset to build a predictive model. For each feature you chose to exclude explain why you made this decision.
+#### Question 5(c)(1)
+
+Using equal-frequency binning transform the Age feature into a categorical feature with three levels youth, middle-aged and senior. Explain the process you apply.
+
+Equal-frequency binning, also known as quantile-based discretization, is a method of dividing a numeric variable (in this case, `Age`) into a specific number of bins such that each bin contains an equal number of observations (or as close to equal as possible). In your example, the goal is to transform the `Age` feature into three categorical levels: "youth," "middle-aged," and "senior." Here's how to apply the process:
+
+##### Step 1: Sort the Age Data
+
+1. **Sort the data**: Arrange the `Age` values in ascending order.
+
+    Sorted `Age` values: [18, 19, 21, 43, 47, 49, 51, 55, 57]
+
+##### Step 2: Calculate Bin Edges
+
+**Calculate the bin size**: Since we want three equal-frequency bins, we divide the total number of data points (9) by the desired number of bins (3) to determine the size of each bin.
+
+Bin size: $|{Observations}| \div |Bins| = 9 \div 3 = 3$
+
+1. **Calculate the bin edges**: Define the edges for each bin. This can be done by determining the index values that separate the bins.
+
+- The first bin ("youth") will include the first 3 data points.
+   Bin 1 ends at index: \(3 \)
+   Age value at index 3 is: 21 (this will be the upper limit for "youth")
+- The second bin ("middle-aged") will include the next 3 data points.
+   Bin 2 ends at index: \(3 + 3 = 6 \)
+   Age value at index 6 is: 51 (this will be the upper limit for "middle-aged")
+- The third bin ("senior") will include the remaining 3 data points.
+   Bin 3 ends at index: \(6 + 3 = 9 \)
+   Since this is the end of the list, all the remaining data points are part of this bin.
+
+##### Step 3: Label the Age Feature
+
+**Label the bins**: Based on the calculated bin edges, label the `Age` feature accordingly.
+
+- "Youth": Ages from the first bin (i.e., less than or equal to 21) are labeled as "youth."
+- "Middle-aged": Ages from the second bin (i.e., more than 21 and less than or equal to 51) are labeled as "middle-aged."
+- "Senior": Ages from the third bin (i.e., more than 51) are labeled as "senior."
+
+##### Conclusion
+
+Apply the above transformation process to the dataset. This process groups the `Age` feature into three bins based on equal-frequency binning, converting the `Age` feature into a categorical feature with three levels: "youth," "middle-aged," and "senior."
+
+#### Question 5(c)(2)
+
+Examine the descriptive features in the dataset and list the features that your would exclude before you would use the dataset to build a predictive model. For each feature you chose to exclude explain why you made this decision.
+
+#### Ans
+
+When building a predictive model, you need to consider which features are relevant and useful for your model, as well as which features may not provide much value or could potentially introduce bias or other issues. In the dataset provided, there are a few features that may be considered for exclusion before using the dataset to build a predictive model:
+
+Features to Exclude and Reasons
+
+1. **Id**
+    - **Reason**: The `Id` feature is likely just a unique identifier for each customer and does not provide any meaningful information about the customer’s behavior or preferences that could be useful for a predictive model. Therefore, it should be excluded.
+
+2. **Mode of Transport**
+    - **Reason**: While `ModeOfTransport` could be relevant to a transport company, depending on the modeling goal, it might be less directly related to the target feature `PrefSocialMedia`. It is a possibility that transport mode influences communication preferences, but a strong correlation must be established to justify its inclusion. Thus, based on preliminary analysis, this feature might not have a strong influence on the target and can be excluded.
+
+3. **Occupation**
+    - **Reason**: This feature could be relevant in some contexts, but it is very broad and may not offer enough granularity to provide meaningful insights into the target feature. Additionally, occupation may introduce noise if not properly categorized. Consider aggregating similar occupations or removing the feature if it doesn’t seem to add much predictive value.
+
+4. **Gender**
+    - **Reason**: Depending on the data source and the context of the application, gender may be a contentious feature due to privacy and ethical concerns. If it doesn't offer a clear benefit in prediction, it might be advisable to exclude it to avoid potential biases and ensure ethical data practices.
+
+These decisions should be informed by an exploratory data analysis (EDA) that examines the relationships and correlations between each feature and the target variable, as well as any ethical, legal, or privacy concerns associated with using specific features. Always aim to keep only the features that offer a meaningful contribution to the model's performance.
+
+---

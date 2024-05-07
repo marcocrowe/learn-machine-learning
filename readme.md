@@ -1,7 +1,7 @@
 
 # [Machine Learning](https://github.com/marcocrowe/learn-machine-learning "Machine Learning")
 
-This repository contains the code for the machine learning.  
+This repository contains the code for the machine learning.
 
 ## Requirements
 

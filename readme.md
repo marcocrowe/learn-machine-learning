@@ -14,6 +14,7 @@ This repository contains the code for the machine learning.
 ## Notes
 
 - [Information Theory](information-theory.md "Information Theory")
+- [Data Types](data-types.md "Data Types")
 
 ## Exercises
 
